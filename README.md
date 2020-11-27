@@ -11,11 +11,8 @@ Examen Primera Semana Rockstar 5G
 ```
 docker build -t "eva_rg5"
 ```
-- Correr imagen en modo developer (salir al cerrar)
+
+- Correr imagen en modo servicio y dinamico
 ```
-docker run -it -p 5000:5000 --rm --name "eva_rg5-volatil" eva_rg5
-```
-- Correr imagen en modo servicio
-```
-docker run -p 5000:5000 -d  --name "eva_rg5-serv" eva_rg5
+docker run -d -p 5050:5050 -v /rockstar/github/evaluacion_rg5:/usr/src/app --name "eva_dynamico" eva_rg5
 ```
